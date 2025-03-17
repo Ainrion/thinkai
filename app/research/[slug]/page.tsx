@@ -142,7 +142,14 @@ const getResearchPaper = (slug: string) => {
   }
 }
 
-export default function ResearchPaperPage({ params }: { params: { slug: string } }) {
+// Define correct params type
+type ResearchParams = {
+  params: {
+    slug: string;
+  };
+};
+
+export default function ResearchPaperPage({ params }: ResearchParams) {
   const paper = getResearchPaper(params.slug)
 
   return (
@@ -258,4 +265,3 @@ export default function ResearchPaperPage({ params }: { params: { slug: string }
     </div>
   )
 }
-
