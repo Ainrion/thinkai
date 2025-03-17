@@ -179,7 +179,7 @@ export default function ResearchPage() {
             <div className="space-y-4 max-w-2xl">
               <h2 className="text-3xl font-bold tracking-tight">Interested in collaborating?</h2>
               <p className="text-slate-300">
-                We're always looking for research partners to push the boundaries of AI technology.
+                We&apos;re always looking for research partners to push the boundaries of AI technology.
               </p>
             </div>
             <Button size="lg" className="bg-primary hover:bg-primary/80 text-white">
@@ -191,4 +191,3 @@ export default function ResearchPage() {
     </div>
   )
 }
-
