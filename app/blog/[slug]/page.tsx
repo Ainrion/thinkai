@@ -46,11 +46,11 @@ const getBlogPost = (slug: string) => {
       
       <p class="mb-4">As we continue to advance MCP technology, several exciting directions emerge:</p>
       
-      <p class="mb-4">First, we're exploring dynamic agent creation, where new specialized agents can be instantiated on-demand to address novel problems. This capability would significantly enhance the adaptability of MCP systems.</p>
+      <p class="mb-4">First, we&apos;re exploring dynamic agent creation, where new specialized agents can be instantiated on-demand to address novel problems. This capability would significantly enhance the adaptability of MCP systems.</p>
       
-      <p class="mb-4">Second, we're investigating improved coordination mechanisms that can optimize the allocation of computational resources based on the specific requirements of each task.</p>
+      <p class="mb-4">Second, we&apos;re investigating improved coordination mechanisms that can optimize the allocation of computational resources based on the specific requirements of each task.</p>
       
-      <p class="mb-4">Finally, we're working on enhanced learning capabilities that allow agents to continuously improve their performance based on feedback and experience.</p>
+      <p class="mb-4">Finally, we&apos;re working on enhanced learning capabilities that allow agents to continuously improve their performance based on feedback and experience.</p>
       
       <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
       
@@ -80,7 +80,14 @@ const getBlogPost = (slug: string) => {
   }
 }
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
+// Define correct params type
+type BlogPostParams = {
+  params: {
+    slug: string;
+  };
+};
+
+export default function BlogPostPage({ params }: BlogPostParams) {
   const post = getBlogPost(params.slug)
 
   return (
@@ -199,4 +206,3 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     </div>
   )
 }
-
