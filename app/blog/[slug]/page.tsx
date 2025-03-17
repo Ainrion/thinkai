@@ -80,14 +80,16 @@ const getBlogPost = (slug: string) => {
   }
 }
 
-// Define correct params type
-type BlogPostParams = {
-  params: {
-    slug: string;
-  };
+// Use the Next.js proper typing for dynamic route params
+type Params = {
+  slug: string;
 };
 
-export default function BlogPostPage({ params }: BlogPostParams) {
+type Props = {
+  params: Params;
+};
+
+export default function BlogPostPage({ params }: Props) {
   const post = getBlogPost(params.slug)
 
   return (
